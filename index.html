@@ -1,0 +1,177 @@
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="left">
+      <button class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <a href="index.html" class="logo">
+        <i class="fab fa-youtube"></i>
+        <span>YouTube</span>
+      </a>
+    </div>
+    
+    <div class="search">
+      <form>
+        <input type="text" placeholder="Search">
+        <button type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      </div>
+
+    <div class="right">
+      <button>
+        <i class="fas fa-video"></i>
+      </button>
+      <button>
+        <i class="fas fa-bell"></i>
+      </button>
+      <button class="profile" id="profile-button">
+        <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle fill='%23AAA' cx='12' cy='12' r='12'/><path fill='%23555' d='M12 14c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z'/></svg>" alt="Profile">
+      </button>
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <div class="section">
+      <a href="#" id="home-link"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="#"><i class="fas fa-compass"></i><span>Explore</span></a>
+      <a href="#" id="shorts-link"><i class="fas fa-play-circle"></i><span>Shorts</span></a>
+      <!--<a href="#" id="rounds-link">-->
+      <a href="#"><i class="fas fa-folder"></i><span>Subscriptions</span></a>
+    </div>
+    <div class="section">
+      <a href="#"><i class="fas fa-box"></i><span>Library</span></a>
+      <a href="#"><i class="fas fa-history"></i><span>History</span></a>
+      <a href="#"><i class="fas fa-clock"></i><span>Watch later</span></a>
+    </div>
+    <div class="section subscriptions">
+      <h3>SUBSCRIPTIONS</h3>
+      <a href="#"><img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle fill='red' cx='12' cy='12' r='12'/></svg>"><span>Channel 1</span></a>
+      <a href="#"><img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle fill='blue' cx='12' cy='12' r='12'/></svg>"><span>Channel 2</span></a>
+      <a href="#"><img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle fill='green' cx='12' cy='12' r='12'/></svg>"><span>Channel 3</span></a>
+    </div>
+  </nav>
+
+  <main>
+    <div id="content-area">
+      <div class="videos">
+        <!-- Video grid -->
+      </div>
+
+      <div id="rounds-container" class="hidden">
+        <button id="add-round" class="add-round-btn">
+          <i class="fas fa-plus"></i>
+        </button>
+        <!-- Rounds will be added here -->
+      </div>
+
+      <div id="shorts-container" class="hidden">
+        <h2>Shorts have been nerfed! Try Rounds instead!</h2>
+        <button id="switch-to-rounds" class="switch-btn">Switch to Rounds</button>
+      </div>
+      
+      <div id="profile-container" class="hidden">
+        <div class="profile-header">
+          <div class="profile-banner"></div>
+          <div class="profile-info">
+            <div class="profile-avatar">
+              <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle fill='%23AAA' cx='12' cy='12' r='12'/><path fill='%23555' d='M12 14c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z'/></svg>" alt="Channel Avatar">
+            </div>
+            <div class="profile-details">
+              <h1 class="channel-name">Your Channel</h1>
+              <p class="channel-handle">@yourchannel</p>
+              <p class="channel-stats"><span id="subscriber-count">0</span> subscribers • <span id="video-count">0</span> videos</p>
+              <p class="channel-description">Welcome to my YouTube channel! Here I upload videos about technology, gaming, and more.</p>
+            </div>
+            <div class="profile-actions">
+              <button class="subscribe-btn">SUBSCRIBE</button>
+              <button class="notification-btn"><i class="fas fa-bell"></i></button>
+            </div>
+          </div>
+          <div class="profile-nav">
+            <ul>
+              <li class="active"><a href="#">HOME</a></li>
+              <li><a href="#">VIDEOS</a></li>
+              <li><a href="#">SHORTS</a></li>
+              <li><a href="#">LIVE</a></li>
+              <li><a href="#">PLAYLISTS</a></li>
+              <li><a href="#">CHANNELS</a></li>
+              <li><a href="#">ABOUT</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="profile-content">
+          <h2 class="section-title">Uploads</h2>
+          <div class="profile-videos">
+            <!-- No uploads message will be shown here -->
+          </div>
+          
+          <h2 class="section-title">Created Playlists</h2>
+          <div class="profile-playlists">
+            <div class="playlist">
+              <div class="playlist-thumbnail">
+                <div class="thumbnail-overlay">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Favorite Videos</h3>
+              <p>10 videos</p>
+            </div>
+            <div class="playlist">
+              <div class="playlist-thumbnail">
+                <div class="thumbnail-overlay">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Gaming Highlights</h3>
+              <p>5 videos</p>
+            </div>
+            <div class="playlist">
+              <div class="playlist-thumbnail">
+                <div class="thumbnail-overlay">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+              <h3>Music Mix</h3>
+              <p>15 videos</p>
+            </div>
+          </div>
+
+          <h2 class="section-title">History & More</h2>
+          <div class="profile-extras">
+            <div class="extra-item" id="profile-history">
+              <i class="fas fa-history"></i>
+              <p>History</p>
+            </div>
+            <div class="extra-item" id="profile-watchlater">
+              <i class="fas fa-clock"></i>
+              <p>Watch Later</p>
+            </div>
+            <div class="extra-item" id="profile-library">
+              <i class="fas fa-box"></i>
+              <p>Library</p>
+            </div>
+            <div class="extra-item" id="profile-liked">
+              <i class="fas fa-thumbs-up"></i>
+              <p>Liked Videos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
